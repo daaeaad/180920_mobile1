@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+@font-face {
+    font-family:"MyriadPro-BoldIt";
+    src:local("MyriadPro-BoldIt"),
+        url("./font/MyriadPro-BoldIt.otf.eot") format("embedded-opentype"),
+        url("./font/MyriadPro-BoldIt.woff") format("woff");
+}
+
+@font-face {
+    font-family:"MyriadPro-SemiboldIt";
+    src:local("MyriadPro-SemiboldIt"),
+        url("./font/MyriadPro-SemiboldIt.otf.eot") format("embedded-opentype"),
+        url("./font/MyriadPro-SemiboldIt.woff") format("woff");
+}
+
+
+
+@font-face {
+    font-family:"NanumSquareR";
+    src:local("NanumSquareR"),
+        url("./font/NanumSquareR.eot") format("embedded-opentype"),
+        url("./font/NanumSquareR.woff") format("woff");
+}
+
+@font-face {
+    font-family:"NanumSquareEB";
+    src:local("NanumSquareEB"),
+        url("./font/NanumSquareEB.eot") format("embedded-opentype"),
+        url("./font/NanumSquareEB.woff") format("woff");
+}
+
+@font-face {
+    font-family:"NanumSquareL";
+    src:local("NanumSquareL"),
+        url("./font/NanumSquareL.eot") format("embedded-opentype"),
+        url("./font/NanumSquareL.woff") format("woff");
+}
+
+
+
+.en_bi {
+    font-family:"MyriadPro-BoldIt";
+}
+.en_sbi {
+    font-family:"MyriadPro-SemiboldIt";
+}
+
+
+
+.ko_l {
+    font-family: "NanumSquareL";
+}
+.ko_r {
+    font-family: "NanumSquareR";
+}
+.ko_eb {
+    font-family: "NanumSquareEB";
+}

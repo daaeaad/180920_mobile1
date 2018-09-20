@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>모바일 레이아웃</title>
+    
+    <meta name="veiwport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    
+    
+<!--메타포아이콘(favicon)-->
+  <!--   파비콘(favicon) 설정-->
+<!--   애플-->
+   <link rel="apple-touch-icon" sizes="128x107" href="./images/ico/meta_favicon_wsB_icon.ico">
+<!--   안드로이드-->
+   <link rel="manifest" href="manifest.json">
+<!--   데스크탑-->
+   <link rel="icon" type="image/png" href="./images/meta_favicon.png" sizes="33x12"> 
+   
+   
+<!--   폰트-->
+    <link rel="stylesheet" href="./font.css">
+    
+    
+<!--   구글 애널리틱스 추적-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124349985-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-124349985-1');
+    </script>
+
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+/*            가로 스와이프방지*/
+            overflow-x: hidden;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .splash {
+            width: 100%;
+            height: 100%;
+            background-image: url("./images/splash.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1200;
+        }
+        .loading {
+            position: absolute;
+            bottom: 20%;
+            left: 31%;
+            width: 0;
+            height: 6px;
+            background-color: #e62149;
+        }
+    </style>
+           
+    <style>
+        .wrap {
+            width: 100%;
+            height: 100%;
+        }
+        .wrap_inner {
+            width: 820px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+    </style>
+           
+    <style>
+        #hd {
+            width: 100%;
+            height: 100px;
+            background-color: #fff;
+        }
+        #hd .wrap_inner.hdInner {
+            height: 54px;
+            margin: 70px auto;
+        }
+        #hd .ico_menu {
+            display: block;
+            width: 62px;
+            height: 54px;
+            background-image: url("./img/ico_menu.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        #hd h1 {
+            width: 100%;
+            height: 40px;
+        }
+        #hd h1 .logo {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-image: url("./img/logo_wordtype.png");
+            background-repeat: no-repeat;
+            background-size: 313px 40px;
+            background-position: center center;
+        }
+    </style>
+           
+    <style>
+        .con1 {
+            width: 100%;
+            height: 1374px;
+            background-image: url("./img/img_mainbg.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center center;
+        }
+        .con1 .wrap_inner {
+             padding-top: 96px;
+             height: auto;   
+        }
+        .con1 .barcodeSec {
+            width: 100%;
+            height: 440px;
+            padding-top: 46px;
+            background-color: #c62649;
+        }
+        .con1 .barcodeSec li {
+            width: 692px;
+            height: 388px;
+            margin: 0 auto;
+        }
+        .con1 .barcodeSec li p {
+            color: white;
+        }
+        .con1 .barcodeSec li .secTit {
+            font-size: 30px;
+        }
+        .con1 .barcodeSec li .secCom {
+            width: 692px;
+            height: 64px;
+        }
+        .con1 .barcodeSec li .secCom .memberName {
+            width: 50%;
+            float: left;
+            font-size: 64px;
+            margin-top: 34px;
+            text-indent: -8px;
+        }
+        .con1 .barcodeSec li .secCom .memberName span {
+            font-size: 40px;
+        }
+        .con1 .barcodeSec li .secCom .memberLv {
+            width: 50%;
+            float: right;
+            font-size: 30px;
+            text-align: right;
+            margin-top: 64px;
+        }
+        .con1 .barcodeSec li .barcode {
+            width: 692px;
+            height: 220px;
+            margin-top: 76px;
+            background-color: white;
+        }
+        .con1 .barcodeSec li .barcode img {
+            display: block;
+            width: 622px;
+            height: 148px;
+            padding: 38px 33px 38px 33px;
+        }
+        
+        
+        .con1 .pointSec {
+            width: 100%;
+            height: 192px;
+            margin: 98px auto;
+        }
+        .con1 .pointSec ul {
+            width: 358px;
+            height: 100%;
+        }
+        .con1 .pointSec ul p {
+            text-align: center;
+        }
+        .con1 .pointSec ul .secTit {
+            font-size: 40px;
+            color: white;
+        }
+        .con1 .pointSec ul .point {
+            font-size: 106px;
+            color: #c62649;
+            margin-top: 28px;
+        }
+        
+        
+        .con1 .mySec {
+            width: 100%;
+            height: 194px;
+        }
+        .con1 .mySec ul {
+            width: 100%;
+            height: 100%;
+        }
+        .con1 .mySec ul li {
+            width: 183px;
+            height: 232px;
+            margin-right: 135.5px;
+            
+            position: relative;
+        }
+        .con1 .mySec ul li:nth-child(3) {
+            margin-right: 0;
+        }
+        .con1 .mySec ul li img {
+            display: block;
+            margin: 10px auto;
+        }
+        .con1 .mySec ul li.store img {
+            margin: 0px auto;
+        }
+        .con1 .mySec ul li.cupon span {
+            display: block;
+            width: 58px;
+            height: 58px;
+            border-radius: 29px;
+            background: #c62649;
+            font-size: 33px;
+            color: white;
+            text-align: center;
+            line-height: 54px;
+            
+            position: absolute;
+            top: -24px;
+            right: -20px;
+        }
+        .con1 .mySec ul li .mysecName {
+            font-size: 38px;
+            color: white;
+            text-align: center;
+            line-height: 114px;
+        }
+        .con1 .mySec ul li.store .mysecName {
+            line-height: 76px;
+        }
+    </style>
+
+    <style>
+        .con2 {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: calc(100% - 200px);
+            left: 0;
+            z-index: 1000;
+        }
+        .con2 .con2_rltv {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .con2 .conLine {
+            width: 100%;
+            height: 100%;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            box-sizing: border-box;
+        }
+        .con2 .conLine .conUpBtn {
+            display: block;
+            width: 80px;
+            height: 80px;
+            
+            position: absolute;
+            top: -40px;
+            left: calc(calc(100% - 80px) / 2);
+            
+            background-image: url("./img/btn_conup.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;    
+            background-position: center center;
+        }
+        .con2 .conLine .conUpTxt {
+            font-size: 32px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+         
+               
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    
+    <script>
+    // 스플래시 화면 페이드아웃 후 콘텐츠 보이기
+        $(document).ready(function() {
+            
+            $(".loading").animate({"width":"40%"}, 1000);
+           
+            setTimeout(function() {
+               $(".splash").fadeOut(400); 
+            },1200);
+            
+        });
+    </script>
+    
+</head>
+<body>
+    <div class="splash">
+        <section class="loading">
+            
+        </section>
+    </div>
+
+    <div class="wrap">
+       
+        <header id="hd">
+            <div class="wrap_inner hdInner">
+                <h1>
+                    <a class="logo"></a>
+                </h1>
+                <label for="" class="ico_menu right"></label>
+            </div>
+        </header>
+        
+        <section class="con1">
+            <div class="wrap_inner">
+                <ul class="barcodeSec">
+                    <li>
+                        <p class="secTit en_sbi">MEMBERSHIP</p>
+                        <div class="secCom">
+                            <p class="memberName ko_eb">김다애
+                                <span class="ko_r">님</span>
+                            </p>
+                            <p class="memberLv ko_eb">DIAMOND
+                            </p>
+                        </div>
+                        <div class="barcode">
+                            <img src="./img/img_varcode.png" alt="바코드이미지">
+                        </div>
+                    </li>
+                </ul>
+                
+                <section class="pointSec">
+                    <ul class="left">
+                        <p class="secTit ko_b">사용가능 포인트</p>
+                        <p class="point ko_r">30,798</p>
+                    </ul>
+                    <ul class="right">
+                        <p class="secTit ko_b">소멸예정 포인트</p>
+                        <p class="point ko_r">11,207</p>
+                    </ul>
+                </section>
+                <section class="mySec">
+                    <ul>
+                        <li class="cupon left">
+                            <img src="./img/ico_cupon.png" alt="cupon">
+                            <span>3</span>
+                            <p class="mysecName ko_r">나의 쿠폰</p>
+                        </li>
+                        <li class="message left">
+                            <img src="./img/ico_message.png" alt="message">
+                            <span></span>
+                            <p class="mysecName ko_r">알림 메세지</p>
+                        </li>
+                        <li class="store left">
+                            <img src="./img/ico_store.png" alt="store">
+                            <span>3</span>
+                            <p class="mysecName ko_r">단골 매장</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+        
+        <section class="con2">
+           <div class="con2_rltv">
+                <div class="conLine">
+                    <span class="conUpBtn"></span>
+                    <p class="conUpTxt en_sbi">TODAY'S EVENT</p>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
